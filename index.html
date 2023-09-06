@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <div class = "navBar">
+        <img class = "logo" src="images/theguardianlogo.png">
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div class = "mainPageContainer" onclick = "countClicks()">
+    
+        <h1 class = "articleTitle">Fitness tracking app Strava gives away location of secret US army bases</h1>
+        <h2 class = "articleSubHeading">Data about exercise routes shared online by soldiers can be used to pinpoint overseas facilities</h2>
+        <img class = "image1" src="images/image1.png">
+
+        <div class = "mainContent">
+            <p>Sensitive information about the location and staffing of military bases and spy outposts around the world has been revealed by a fitness tracking company.</p>
+            <p>The details were released by Strava in a data visualisation map that shows all the activity tracked by users of its app, which allows people to record their exercise and share it with others.</p>
+            <p>The map, released in November 2017, shows every single activity ever uploaded to Strava – more than 3 trillion individual GPS data points, according to the company. The app can be used on various devices including smartphones and fitness trackers like Fitbit to see popular running routes in major cities, or spot individuals in more remote areas who have unusual exercise patterns.</p>
+            <p>However, over the weekend military analysts noticed that the map is also detailed enough that it potentially gives away extremely sensitive information about a subset of Strava users: military personnel on active service.</p>
+            <p>Nathan Ruser, an analyst with the Institute for United Conflict Analysts, first noted the lapse. The heatmap “looks very pretty” he wrote, but is “not amazing for Op-Sec” – short for operational security. “US Bases are clearly identifiable and mappable.”</p>
+            <p>“If soldiers use the app like normal people do, by turning it on tracking when they go to do exercise, it could be especially dangerous,” Ruser added, highlighting one particular track that “looks like it logs a regular jogging route.”</p>
+            <p>“In Syria, known coalition (ie US) bases light up the night,” writes analyst Tobias Schneider. “Some light markers over known Russian positions, no notable colouring for Iranian bases … A lot of people are going to have to sit through lectures come Monday morning.”</p>
+            <p>In locations like Afghanistan, Djibouti and Syria, the users of Strava seem to be almost exclusively foreign military personnel, meaning that bases stand out brightly. In Helmand province, Afghanistan, for instance, the locations of forward operating bases can be clearly seen, glowing white against the black map.</p>
+            <img class = "image1" src="images/image2.png">
+            <p>Zooming in on one of the larger bases clearly reveals its internal layout, as mapped out by the tracked jogging routes of numerous soldiers. The base itself is not visible on the satellite views of commercial providers such as Google Maps or Apple’s Maps, yet it can be clearly seen through Strava.</p>
+            <p>Outside direct conflict zones, potentially sensitive information can still be gleaned. For instance, a map of Homey Airport, Nevada – the US Air Force base commonly known as Area 51 – records a lone cyclist taking a ride from the base along the west edge of Groom Lake, marked on the heatmap by a thin red line.</p>
+            <img class = "image1" src="images/image3.png">
+            <p>RAF Mount Pleasant in the Falkland Islands is lit up brightly on the heatmap, reflecting the exercise regimes of the thousand British personnel there – as are nearby Lake Macphee and Gull Island Pond, apparently popular swimming spots.</p>
+            <img class = "image1" src="images/image4.png">
+            <p>When Strava released the heatmap, an updated version of one it had previously published in 2015, it announced that “this update includes six times more data than before – in total 1 billion activities from all Strava data through September 2017. Our global heatmap is the largest, richest, and most beautiful dataset of its kind. It is a direct visualisation of Strava’s global network of athletes.”</p>
+            <p>Strava demonstrated that the new heatmap was detailed enough to see kiteboarding in Mexico, to track the route of the Camino de Santiago across northern Spain and to see the sea route of the Ironman triathalon in Kona, Hawaii. Perhaps the closest to the current operational security issues that it noted, however, was the layout of the Burning Man festival in the Nevadan desert. “The unique pentagonal pattern of Burning Man’s pop-up city is forever etched into the Heatmap, thanks to all the runners and cyclists who have used Strava to explore it,” the company wrote.</p>
+            <br>
+            <a href = "https://www.theguardian.com/world/2018/jan/28/fitness-tracking-app-gives-away-location-of-secret-us-army-bases">Link to actual article</a>
+        </div>
+
+
+        <!-- Pinned element -->
+        <div class="pinned-element">
+            <p> 
+                X: <span id = 'x-valueID'></span>
+                | Y: <span id = 'y-valueID'></span>
+            </p>
+            <p>
+                No. of clicks: <span id = 'mouseClicks'></span>
+            </p>
+            <p>
+                Time spent: <span id = 'timeSpentID'></span> seconds
+            </p>
+            <p>
+                X-Direction: <span id = 'xdirectionID'></span>
+            </p>
+            <p>
+                Y-Direction: <span id = 'ydirectionID'></span>
+            </p>
+            <p>
+                Scrolled from top: <span id = 'scrolledID'></span>mm
+            </p>
+             <p>
+                Scrolling speed: <span id = 'scrollingSpeedID'></span> mm/s
+            </p>
+        </div>
+
+    </div>
+
+
+
+    <!-- FIRST POPUP -->
+    <!-- Overlay for pop up -->
+    <div class = "overlay" id = "blur"></div>
+    <div class = "popup">
+        <h2>Cookies</h2>
+        <h3>We value your privacy!</h3>
+        <p class = "cookieDesc">We use cookies to create the best browsing experience for you.</p>
+        <a href = "index.html" id = "accept">Accept cookies</a>
+        <a href = "index.html" id = "customize">Customize</a>
+    </div>
+
+    
+    
+
+
+    <!-- SECOND POPUP -->
+    <div class = "popup2">
+        <div class = "popup2-content">
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept secure cookies that help theives steal my activity and target me with ads</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept supercookies that track my online behavior to understand my habits</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept persistent cookies that collect information about my behavior on that website</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept HTTP cookies that contain information about the user's activity and help maintain session states</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept session cookies that help navigate your activity on the website aka transient cookies</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept first-party cookies that help improve the experience on the site</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept authentication cookies that work by identifying users through their login credentials</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept load-balancing cookies that connect information between a user's web server and yours</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept user-centric security cookies that detect authentication errors and abuses</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept second-party cookies that might not even exist and seem to be first-party data shared between partners</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept cookies from live-shat popups that streamline user experience for behavioral advertising</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept cookies that help website owners understand how users are interacting with their site</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept cookies that collect large amounts of personal information and can be used to create detailed profiles</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept cookies that might pose a security risk and used for malicious purposes such as to deliver malware</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept zombie cookies that aren't actual cookies but are in the form of images, local shared objects or HTML5 Web storage</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept secure cookies that help theives steal my activity and target me with ads</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept supercookies that track my online behavior to understand my habits</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept persistent cookies that collect information about my behavior on that website</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept HTTP cookies that contain information about the user's activity and help maintain session states</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept session cookies that help navigate your activity on the website aka transient cookies</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept first-party cookies that help improve the experience on the site</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept authentication cookies that work by identifying users through their login credentials</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept load-balancing cookies that connect information between a user's web server and yours</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept user-centric security cookies that detect authentication errors and abuses</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept second-party cookies that might not even exist and seem to be first-party data shared between partners</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept cookies from live-shat popups that streamline user experience for behavioral advertising</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept cookies that help website owners understand how users are interacting with their site</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept cookies that collect large amounts of personal information and can be used to create detailed profiles</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept cookies that might pose a security risk and used for malicious purposes such as to deliver malware</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class = "popup2-flex">
+                <div class = "acceptStatements"><p>I accept zombie cookies that aren't actual cookies but are in the form of images, local shared objects or HTML5 Web storage</p></div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" class = "checkboxID" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+            
+            <div class = "saveOrAccept">
+                <div class = "acceptButton2" ><a href = "#" id = "accept2">Accept all cookies</a></div>
+                <div class = "saveButton"><a href = "#" id= "savePreferences">Save preferences</a></div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

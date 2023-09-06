@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+
+body{
+  background-color: white;
+}
+
+/* NAV BARS */
+.logo{
+  width: 280px;
+  float: right;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
+.navBar{
+  height:200px;
+  background-color: #071d76;
+}
+
+/* MAIN CONTENT */
+.mainPageContainer{
+  max-width: 800px;
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  backdrop-filter: blur(10px); /* Apply a blur effect */
+  display: none; /*Initially hidden */
+  z-index: 1; /* Ensure it's above other content */
+}
+
+.articleTitle{
+  font-family: 'EB Garamond', serif;
+  font-size: 43px;
+  line-height: 100%;
+}
+
+.articleSubHeading{
+  font-family: 'EB Garamond', serif;
+  font-weight: semi-bold;
+}
+
+.image1{
+  width: 100%;
+  max-width: 800px;
+}
+
+.mainContent{
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 17px;
+}
+
+/* Pinned element */
+.pinned-element{
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-family: 'IBM Plex Serif', serif;
+  color: red;
+  font-size : 15px;
+  line-height: 50%;
+  background-color: white;
+  padding-left: 10px;
+  opacity: 80%;
+}
+
+/* POPUPS */
+.popup{
+    background: white;
+    width: 300px; 
+    padding: 30px 40px;
+    position: fixed; 
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: sans-serif;
+    text-align: center;
+    display: none;
+    z-index: 2; /* Ensure it's above the overlay */
+}
+
+.cookieDesc{
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.popup2{
+    background: white;
+    width: 420px; 
+    padding: 30px 40px;
+    position: absolute; 
+    transform: translate(-50%, -25%);
+    left: 50%;
+    top: 100%;
+    border-radius: 8px;
+    font-family: sans-serif;
+    text-align: left;
+    font-size: 12px;
+    display: none;  
+    z-index: 2; /* Ensure it's above the overlay */
+}
+
+
+
+#accept{
+    display: block;
+    width: 200px;
+    position: relative; 
+    margin: 10px auto;
+    text-align: center;
+    background: #0f72e5;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 0; 
+    border-radius: 20px;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#customize{
+  font-size: 10px;
+}
+
+
+/* Switches */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 10px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider.round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.popup2{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 500px;
+}
+
+.popup2-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.saveOrAccept{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.popup2-content{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mainPageContainer{
+  margin:50px;
+}
+
+.acceptButton2{  
+  display: block;
+  position: relative; 
+  margin: 10px auto;
+  text-align: center;
+  background: #0f72e5;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px; 
+  border-radius: 20px;
+  font-size: 22px;
+}
+
+.saveButton{
+  margin-top: 20px;
+}
+
+.acceptStatements{
+  margin-right: 20px;
+}
+
+
+
+
+/* MESSY SITE */
+.messySiteMain{
+  font-family: 'EB Garamond', serif;
+  margin-left: 50px;
+  margin-top: 50px;
+  color: white;
+}
+
+.messySiteLink{
+  color: rgb(77, 222, 255)
+}
